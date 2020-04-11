@@ -1,9 +1,13 @@
-import { connect } from "react-redux";
 
 import Table from "./components/Table";
+import { wormTable } from "./wormtable"
 
 
-const mapStateToProps = (state) => state.red;
-
-
-export default connect(mapStateToProps)(Table)
+export default wormTable({
+    table: 'red',
+    initialValues: {
+        n: 8,
+        x: 1,
+        m: 29,
+    },
+})(Table)
