@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <Table />
+      <Table n={8} x={1} m={29} />
     </div>
   );
 }
