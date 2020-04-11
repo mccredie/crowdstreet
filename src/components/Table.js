@@ -45,7 +45,7 @@ const worm = (seq, cols) => {
 const Row = ({values}) => (
     <tr>
     {
-        values.map((val) => (<td>{val}</td>))
+        values.map((val, index) => (<td key={index}>{val}</td>))
     }
     </tr>
 );
@@ -54,9 +54,11 @@ export default ({n, x, m}) => {
     const rows = worm(genSequence(n, x, m), COL_COUNT);;
     return (
         <table className="Table">
-        {
-            rows.map((row) => (<Row values={row} />))
-        }
+            <tbody>
+            {
+                rows.map((row, index) => (<Row key={index} values={row} />))
+            }
+            </tbody>
         </table>
     );
 };
