@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.css';
 
-import Table from "./components/Table"
+import RedWormTable from "./RedWormTableView"
+import GreenWormTable from "./GreenWormTableView"
+import BlueWormTable from "./BlueWormTableView"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <Table n={8} x={1} m={29} />
+      <RedWormTable />
+      <GreenWormTable />
+      <BlueWormTable />
+
     </div>
   );
 }
