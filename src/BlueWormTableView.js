@@ -1,6 +1,6 @@
 
-import Table from "./components/Table";
 import { wormTable } from "./wormtable"
+import WormTable from "./components/WormTable";
 
 
 export default wormTable({
@@ -10,4 +10,4 @@ export default wormTable({
         x: 2,
         m: 81,
     }
-})(Table)
+})(WormTable)
