@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Field } from "redux-form";
 
+import "./Config.css";
 
 export default ({ handleSubmit }) => {
-    return <form onSubmit={handleSubmit}>
+    return <form className="Config" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="n">N = </label>
         <Field name="n" component="input" type="text"  parse={(value) => parseInt(value)} />

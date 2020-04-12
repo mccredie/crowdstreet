@@ -1,8 +1,22 @@
 @media only screen and (max-width: 1200px) {
   .App .App-blueTable {
     display: none;
-
   }
 }
 
+.App .App-blueTable..WormTable-container {
+  border-color: blue;
+}
 
+.App .App-redTable .WormTable-container {
+  border-color: red;
+}
+
+.App .App-greenTable .WormTable-container {
+  border-color: green;
+}
+
+.App .App-config {
+  clear: both;
+  width: 400px;
+}
