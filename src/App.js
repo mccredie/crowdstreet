@@ -4,20 +4,23 @@ import './App.css';
 import RedWormTable from "./RedWormTableView";
 import GreenWormTable from "./GreenWormTableView";
 import BlueWormTable from "./BlueWormTableView";
-import ConfigPanel from "./ConfigPanel";
+import RedConfig from "./RedConfig"
+import BlueConfig from "./BlueConfig"
+import GreenConfig from "./GreenConfig"
 
 function App() {
   return (
     <div className="App">
-      <div style={{clear: "right"}}>
+      <div>
           <RedWormTable className="App-redTable" />
           <GreenWormTable className="App-greenTable" />
           <BlueWormTable className="App-blueTable" />
       </div>
-      <div className="App-config">
-          <ConfigPanel />
+      <div style={{clear: 'both'}}>
+          <RedConfig />
+          <BlueConfig />
+          <GreenConfig />
       </div>
-
     </div>
   );
 }

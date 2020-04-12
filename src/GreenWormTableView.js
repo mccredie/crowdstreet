@@ -1,12 +1,3 @@
-import { wormTable } from "./wormtable"
-import WormTable from "./components/WormTable";
+import makeTable from "./table-hoc";
 
-export default wormTable({
-    table: 'green',
-    initialValues: {
-        n: 231,
-        x: 1,
-        m: 247,
-        w: 30,
-    }
-})(WormTable)
+export default makeTable('green');

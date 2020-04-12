@@ -1,14 +1,4 @@
 
-import WormTable from "./components/WormTable";
-import { wormTable } from "./wormtable"
+import makeTable from "./table-hoc";
 
-
-export default wormTable({
-    table: 'red',
-    initialValues: {
-        n: 8,
-        x: 1,
-        m: 29,
-        w: 20,
-    },
-})(WormTable)
+export default makeTable('red');

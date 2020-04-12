@@ -1,4 +1,8 @@
 
 .Config {
-  background-color: #ccc;
+  display: none;
+}
+
+.Config.isOpen {
+  display: block;
 }

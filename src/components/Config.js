@@ -1,11 +1,11 @@
 import React from 'react';
-
 import { Field } from "redux-form";
+import classNames from "classnames";
 
 import "./Config.css";
 
-export default ({ handleSubmit, onCancel }) => {
-    return <form className="Config" onSubmit={handleSubmit}>
+export default ({ className, handleSubmit, onSubmit, onCancel }) => (
+    <form className={classNames("Config", className)} onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label htmlFor="n">N = </label>
         <Field name="n" component="input" type="text"  parse={(value) => parseInt(value)} />
@@ -25,4 +25,4 @@ export default ({ handleSubmit, onCancel }) => {
       <button type="submit">Ok</button>
       <button onClick={onCancel}>Cancel</button>
     </form>
-};
+);
