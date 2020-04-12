@@ -9,5 +9,6 @@ export default wormTable({
         n: 47,
         x: 2,
         m: 81,
+        w: 40,
     }
 })(WormTable)

@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <RedWormTable />
-      <GreenWormTable />
-      <BlueWormTable />
+      <RedWormTable color="red"/>
+      <GreenWormTable color="green"/>
+      <BlueWormTable color="blue"/>
     </div>
   );
 }
