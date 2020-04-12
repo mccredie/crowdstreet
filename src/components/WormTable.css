@@ -2,6 +2,7 @@
 .WormTable {
   float: left;
   margin: 6px;
+  min-width: 320px;
 }
 
 .WormTable .WormTable-container {

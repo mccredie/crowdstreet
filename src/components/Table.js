@@ -52,7 +52,6 @@ const Row = ({values}) => (
 
 export default ({n, x, m}) => {
     const rows = worm(genSequence(n, x, m), COL_COUNT);;
-    console.log("NXM: ", n, x, m);
     return (
         <table className="Table">
             <tbody>

@@ -12,7 +12,7 @@ function App() {
       </header>
       <RedWormTable color="red"/>
       <GreenWormTable color="green"/>
-      <BlueWormTable color="blue"/>
+      <BlueWormTable className="App-blueTable" color="blue"/>
     </div>
   );
 }
