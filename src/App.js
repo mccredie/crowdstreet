@@ -4,7 +4,7 @@ import './App.css';
 import RedWormTable from "./RedWormTableView";
 import GreenWormTable from "./GreenWormTableView";
 import BlueWormTable from "./BlueWormTableView";
-import Config from "./Config";
+import ConfigPanel from "./ConfigPanel";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <BlueWormTable className="App-blueTable" />
       </div>
       <div className="App-config">
-          <Config />
+          <ConfigPanel />
       </div>
 
     </div>

@@ -2,19 +2,17 @@
  * This is similar to the way redux-form works.  */
 
 import { connect } from "react-redux";
-import { reduxForm } from "redux-form";
 
 import reduce from "./state";
-import { set } from "./actions"
+import { open, close } from "../config/actions"
 
 export const wormTable = ({table, initialValues}) => (component) => {
     const mapStateToProps = (state) => ({...initialValues, ...state.worms[table]});
     const mapDispatchToProps = (dispatch) => ({
-        onSubmit: (payload) => dispatch({ ...set(payload), table }),
+        onConfigure: () => dispatch(open(table)),
+        onCancel: () => dispatch(close()),
     });
-    return connect(mapStateToProps, mapDispatchToProps)(
-        reduxForm({ form: `worm/${table}`, initialValues })(component)
-    )
+    return connect(mapStateToProps, mapDispatchToProps)(component);
 }
 
 export const reduceWormTables = (state={}, action) => {

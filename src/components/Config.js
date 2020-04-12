@@ -4,7 +4,7 @@ import { Field } from "redux-form";
 
 import "./Config.css";
 
-export default ({ handleSubmit }) => {
+export default ({ handleSubmit, onCancel }) => {
     return <form className="Config" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="n">N = </label>
@@ -22,6 +22,7 @@ export default ({ handleSubmit }) => {
         <label htmlFor="w">W = </label>
         <Field name="w" component="input" type="text" parse={(value) => parseInt(value)} />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">Ok</button>
+      <button onClick={onCancel}>Cancel</button>
     </form>
 };
