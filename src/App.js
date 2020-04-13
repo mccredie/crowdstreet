@@ -1,4 +1,6 @@
 import React from 'react';
+import Octicon, {MarkGithub} from '@primer/octicons-react'
+
 import './App.css';
 
 import RedTable from "./RedTableView";
@@ -12,6 +14,13 @@ import { makeSaver, retrieve } from "./local-storage";
 function App() {
   return (
     <div className="App">
+      <a
+          className="github-button"
+          href="https://github.com/mccredie/crowdstreet"
+      >
+          <Octicon icon={MarkGithub}/>
+          <span>View on Github</span>
+      </a>
       <div>
           <RedTable className="App-redTable" />
           <GreenTable className="App-greenTable" />
