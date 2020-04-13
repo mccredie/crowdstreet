@@ -1,4 +1,5 @@
 
 import makeTable from "./table-hoc";
+import WormTable from "./components/WormTable";
 
-export default makeTable('red');
+export default makeTable('red')(WormTable);

@@ -4,23 +4,23 @@ import { connect } from "react-redux";
 import classNames from "classnames";
 
 import { close } from "./config/actions";
-import ConfigComponent from "./components/Config";
 
 
-export default ({form, initialValues}) => connect(
+export default ({form, ...options}) => (Component) => connect(
     ({config}) => ({
         isOpen: config === form,
     }),
     (dispatch) => ({
         close: () => dispatch(close()),
     })
-)(reduxForm({ form, initialValues })(
-    ({reset, initialize, isOpen, close, ...props}) => (
-        <ConfigComponent
+)(reduxForm({ form, ...options })(
+    ({reset, initialize, isOpen, close, onSubmit, ...props}) => (
+        <Component
             {...props}
             className={classNames({isOpen})}
             onSubmit={(values) => {
                 initialize(values);
+                onSubmit && onSubmit(values);
                 close();
             }}
             onCancel={() => {

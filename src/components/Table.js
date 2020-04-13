@@ -26,15 +26,17 @@ const toSubseq = (seq, size) => {
 
 // Convert the sequence to a set of subsequences that 'worm' around the the
 // table from the end.
-const worm = (seq, cols) => {
+const worm = (seq, direction, cols) => {
     const additionalCells = cols - seq.length % cols;
     const ammendedSeq = seq.slice();
     for(let i=0; i<additionalCells; ++i) {
         ammendedSeq.push(null)
     }
     const result = toSubseq(ammendedSeq, cols);
+    let reverseStartIndex = direction === "ltr-up" ? 1 : 0;
+
     result.forEach((subseq, index) => {
-        if (index % 2 === 1) {
+        if (index % 2 === reverseStartIndex) {
             subseq.reverse()
         }
     })
@@ -50,8 +52,8 @@ const Row = ({values}) => (
     </tr>
 );
 
-export default ({n, x, m}) => {
-    const rows = worm(genSequence(n, x, m), COL_COUNT);;
+export default ({n, x, m, d}) => {
+    const rows = worm(genSequence(n, x, m), d, COL_COUNT);;
     return (
         <table className="Table">
             <tbody>

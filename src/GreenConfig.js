@@ -1,12 +1,7 @@
 import tableConfig from "./table-config-hoc";
+import Config from "./components/Config";
 
 export default tableConfig({
     form: "green",
-    initialValues: {
-        n: 231,
-        x: 1,
-        m: 247,
-        w: 30,
-    },
-});
+})(Config);
 

@@ -3,7 +3,6 @@ import { formValueSelector } from 'redux-form'
 
 
 import { open } from "./config/actions";
-import WormTable from "./components/WormTable";
 
 
 export default (table) => {
@@ -13,10 +12,11 @@ export default (table) => {
         x: selector(state, 'x'),
         m: selector(state, 'm'),
         w: selector(state, 'w'),
+        d: selector(state, 'd'),
     });
     const mapDispatchToProps = (dispatch) => ({
         onConfigure: () => dispatch(open(table)),
     });
 
-    return connect(mapStateToProps, mapDispatchToProps)(WormTable);
+    return connect(mapStateToProps, mapDispatchToProps);
 };

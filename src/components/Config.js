@@ -20,7 +20,14 @@ export default ({ className, handleSubmit, onSubmit, onCancel }) => (
       </div>
       <div>
         <label htmlFor="w">W = </label>
-        <Field name="w" component="input" type="text" parse={(value) => parseInt(value)} />
+        <Field name="w" component="input" type="text" parse={(value) => parseInt(value)} />%
+      </div>
+      <div>
+        <label htmlFor="d">D = </label>
+        <Field name="d" component="select" type="text">
+          <option value="ltr-up">LTR-UP</option>
+          <option value="rtl-up">RTL-UP</option>
+        </Field>
       </div>
       <button type="submit">Ok</button>
       <button onClick={onCancel}>Cancel</button>
