@@ -4,21 +4,22 @@
   }
 }
 
-.App .App-blueTable .WormTable-container {
+.App .App-blueTable .TablePanel-container {
   border-color: blue;
 }
 
-.App .App-redTable .WormTable-container {
+.App .App-redTable .TablePanel-container {
   border-color: red;
 }
 
-.App .App-greenTable .WormTable-container {
+.App .App-greenTable .TablePanel-container {
   border-color: green;
 }
 
 .App .App-config {
   clear: both;
-  width: 400px;
+  width: 320px;
+  margin: 6px;
 }
 
 .App .App-config .label .red {

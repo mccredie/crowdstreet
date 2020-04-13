@@ -1,7 +1,14 @@
 
-.Config {
-}
-
 .Config.isOpen {
   display: block;
+}
+
+form.Config div {
+  margin: 16px 2px;
+}
+
+form.Config input {
+  margin: 4px 0;
+  height: 1.5rem;
+  width: 50%;
 }

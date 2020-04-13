@@ -1,8 +1,9 @@
 
 
 .ConfigPanel {
-  background-color: #ccc;
+  background-color: #eee;
   display: none;
+  padding: 4px;
 }
 
 

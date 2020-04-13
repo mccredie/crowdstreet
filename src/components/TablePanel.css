@@ -1,25 +1,25 @@
 
-.WormTable {
+.TablePanel {
   float: left;
   margin: 6px;
   min-width: 320px;
 }
 
-.WormTable .WormTable-container {
+.TablePanel .TablePanel-container {
   border: 2px solid;
   overflow: auto;
 }
 
-.WormTable .WormTable-container table {
+.TablePanel .TablePanel-container table {
   width: calc(100% - 8px);
   margin: 4px;
 }
 
-.WormTable-configButton {
+.TablePanel-configButton {
   margin: 4px;
 }
 
-.WormTable-widthLable {
+.TablePanel-widthLable {
   float: right;
   margin: 4px;
 }

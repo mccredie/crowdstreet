@@ -5,41 +5,49 @@ import "./Table.css";
 const COL_COUNT = 5;
 
 
-
-const genSequence = (n, x, m) => {
+/* Generate a sequence from start to max in steps */
+const genSequence = (start, step, max) => {
+    if ( step <= 0 || max < start ) {
+        return []
+    }
     const seq = [];
-    let value = n;
-    while (value <= m) {
+    let value = start;
+    while (value <= max) {
         seq.push(value);
-        value += x;
+        value += step;
     }
     return seq;
 }
 
-const toSubseq = (seq, size) => {
-    const subseq = [];
-    for(let start=0; start <= seq.length; start += size) {
-        subseq.push(seq.slice(start, start+size));
+/* pad sequence with null values up to size */
+const padArray = (seq, size) => {
+    for (let i=seq.length; i < size; ++i) {
+        seq[i] = null;
     }
-    return subseq;
+    return seq
+}
+
+/* break `seq` into segments of `size` */
+const segment = (seq, size) => {
+    const segments = [];
+    for(let start=0; start < seq.length; start += size) {
+        segments.push(padArray(seq.slice(start, start+size), size));
+    }
+    return segments;
 }
 
 // Convert the sequence to a set of subsequences that 'worm' around the the
 // table from the end.
 const worm = (seq, direction, cols) => {
-    const additionalCells = cols - seq.length % cols;
-    const ammendedSeq = seq.slice();
-    for(let i=0; i<additionalCells; ++i) {
-        ammendedSeq.push(null)
-    }
-    const result = toSubseq(ammendedSeq, cols);
-    let reverseStartIndex = direction === "ltr-up" ? 1 : 0;
+    const result = segment(seq, cols);
+    let reverseMod = direction === "ltr-up" ? 1 : 0;
 
     result.forEach((subseq, index) => {
-        if (index % 2 === reverseStartIndex) {
+        if (index % 2 === reverseMod) {
             subseq.reverse()
         }
     })
+
     result.reverse();
     return result;
 }
