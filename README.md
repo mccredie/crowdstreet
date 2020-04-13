@@ -1,3 +1,16 @@
+## Introduction
+
+This project was created as part of a programming assignment for a job
+interview with Crowd Street.  I used react-create-app, and the original
+README that came with it is included below.  If for no other reason than it is
+still useful.
+
+The styling isn't perfect, I focused more on
+creating high order components and simple state managment.
+
+
+## Getting started
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

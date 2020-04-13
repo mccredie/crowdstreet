@@ -30,7 +30,9 @@ function App() {
                         w: 20,
                     }
                 )}
-          />
+          >
+            <div className="label">Table: <span className="red">RED</span></div>
+          </RedConfig>
           <BlueConfig
             onSubmit={makeSaver("bluetable")}
             initialValues={retrieve(
@@ -43,7 +45,9 @@ function App() {
                     w: 40,
                 }
             )}
-          />
+          >
+            <div className="label">Table: <span className="blue">BLUE</span></div>
+          </BlueConfig>
           <GreenConfig
             onSubmit={makeSaver("greentable")}
             initialValues={retrieve(
@@ -56,7 +60,9 @@ function App() {
                     w: 30,
                 },
             )}
-          />
+          >
+            <div className="label">Table: <span className="green">GREEN</span></div>
+          </GreenConfig>
       </div>
     </div>
   );

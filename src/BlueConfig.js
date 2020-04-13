@@ -1,5 +1,5 @@
 import tableConfig from "./table-config-hoc";
-import Config from "./components/Config";
+import Config from "./components/ConfigPanel";
 
 export default tableConfig({
     form: "blue",

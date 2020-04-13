@@ -1,12 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
+import Config from "./Config";
 
 import "./ConfigPanel.css";
 
-export default ({visible, children}) => (
-    <>
-    {visible &&
-        <div className="ConfigPanel">{children}</div>
-    }
-    </>
+export default ({className, children, ...props}) => (
+    <div className={classNames("ConfigPanel", className)}>
+        {children}
+        <Config {...props} />
+    </div>
 );
 

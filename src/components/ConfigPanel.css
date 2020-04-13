@@ -1,4 +1,12 @@
 
+
 .ConfigPanel {
   background-color: #ccc;
+  display: none;
 }
+
+
+.ConfigPanel.isOpen {
+  display: block;
+}
+

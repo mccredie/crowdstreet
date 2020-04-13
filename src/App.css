@@ -20,3 +20,19 @@
   clear: both;
   width: 400px;
 }
+
+.App .App-config .label .red {
+  color: red;
+}
+
+.App .App-config .label .blue {
+  color: blue;
+}
+
+.App .App-config .label .green {
+  color: green;
+}
+
+.App .App-config .label span {
+  font-weight: bold;
+}
