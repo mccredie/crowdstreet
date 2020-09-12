@@ -29,6 +29,10 @@
   outline: 0;
 }
 
+.App .github-button .octicon {
+  margin-right: 1em;
+}
+
 .App .App-blueTable .TablePanel-container {
   border-color: blue;
 }
